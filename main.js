@@ -343,7 +343,6 @@ wss.on('connection', (ws) => {
                 logError(stderr)
             });
         }
-
     });
 
     sendMessageClient({

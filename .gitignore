@@ -34,7 +34,7 @@ cache
 artifacts
 
 #settings
-
+/.firebase
 serve.sh
 /data/*
 readCookie.js

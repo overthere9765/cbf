@@ -6,12 +6,12 @@ import "./Home.scss"
 class Home extends React.Component {
     render() {
         return (
-            <section id="home" className="home section--bg" data-bg="img/home/slide.jpg">
+            <section id="home" className="home section--bg" data-bg="img/home/maxresdefault.jpg">
                 <div className="container">
                     <div className="row">
                         <div className="col home__content home__content--left">
-                            <h1 className="home__title">BuyCoin Blockchain</h1>
-                            <p className="home__text">Secure & Easy Way To Trade</p>
+                            <h1 className="home__title">Brazil Fantoken ($CBF)</h1>
+                            <p className="home__text">($CBF) Secure & Easy Way To Trade, earn official products, and more.</p>
 
                             {/* <div className="home__btns">
                                     <a data-scroll href="#getstarted" className="home__btn home__btn--white"><span>Get started</span></a>

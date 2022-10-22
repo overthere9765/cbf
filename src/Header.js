@@ -17,11 +17,11 @@ class Header extends React.Component {
                                 </button>
 
                                 <a data-scroll href="#home" className="header__logo">
-                                    <img className="header__logo-white" src="img/logo.svg" alt="BuyCoin logo" />
-                                    <img className="header__logo-dark" src="img/logo--dark.svg" alt="BuyCoin logo" />
+                                    <img className="header__logo-white" src="img/logo.png" alt="Brazil Fan Club" />
+                                    <img className="header__logo-dark" src="img/logo.png" alt="Brazil Fan Club" />
                                 </a>
 
-                                <span className="header__tagline">BuyCoin <br />Landing Page</span>
+                                <span className="header__tagline">Brazil<br />Fan Club</span>
 
                                 <ul className="header__nav">
                                     <li className="dropdown header__dropdown">
@@ -29,13 +29,16 @@ class Header extends React.Component {
                                         </a>
                                     </li>
                                     <li>
+                                        <a data-scroll href="#about">About</a>
+                                    </li>
+                                    <li>
+                                        <a data-scroll href="#getstarted">Get Started</a>
+                                    </li>
+                                    <li>
                                         <a data-scroll href="#features">Features</a>
                                     </li>
                                     <li>
                                         <a data-scroll href="#safety">Safety</a>
-                                    </li>
-                                    <li>
-                                        <a data-scroll href="#blog">Blog</a>
                                     </li>
                                     <li>
                                         <a data-scroll href="#contacts">Contacts</a>

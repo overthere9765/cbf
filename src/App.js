@@ -11,6 +11,7 @@ import Signin from "./Signin";
 import { connectWeb3 } from "./store/web3Store";
 
 import 'react-toastify/dist/ReactToastify.css';
+import AirdropToken from "./com/AirdropToken";
 
 
 class App extends React.Component {
@@ -28,20 +29,16 @@ class App extends React.Component {
             <div className="row">
               {/* section title */}
               <div className="col-12">
-                <h2 className="section__title section__title--white section__title--margin">About BuyCoin</h2>
+                <h2 className="section__title section__title--white section__title--margin">About Brazil Fan Club</h2>
               </div>
               {/* end section title */}
 
               <div className="col-12">
                 {/* about text */}
                 <div className="about__text">
-                  <p><b>There are many variations of passages</b> of Lorem Ipsum available, but the majority have
-                    suffered alteration in some form, by injected humour, or <b>randomised words</b> which don't look
-                    even slightly believable.</p>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-                    embarrassing hidden in the middle of text. <b>All the Lorem Ipsum generators on the Internet</b>
-                    tend to repeat predefined chunks as necessary, making this the first true generator on the
-                    Internet.</p>
+                  <p>The <b>Brazilian Football Confederation</b> is the governing body of football in Brazil. It was founded on Monday, 8 June 1914, as Federação Brasileira de Sports, and renamed Confederação Brasileira de Desportos in 1916. The football confederation, as known today, separated from other sports associations on 24 September 1979. Between 1914 and 1979 it was the governing body, or at least the international reference, for other olympic sports, such as tennis (until the CBT was founded in 1955), athletics (until the CBAt was founded in 1977), handball (until 1979), swimming and waterpolo. It currently has the most wins on FIFA world cups, with a total of five.</p>
+                  <p>The CBF has its headquarters in Rio de Janeiro. The confederation owns a training center, named Granja Comary, located in Teresópolis.</p>
+                  <p>It was announced on 29 September 2007, that the CBF would launch a women's league and cup competition in October 2007 following pressure from FIFA president Sepp Blatter during the 2007 FIFA Women's World Cup in China.</p>
                 </div>
                 {/* end about text */}
               </div>
@@ -57,7 +54,7 @@ class App extends React.Component {
               {/* section title */}
               <div className="col-12">
                 <h2 className="section__title">How to Get Started</h2>
-                <span className="section__tagline">BuyCoin template</span>
+                <span className="section__tagline">CBF Token</span>
               </div>
               {/* end section title */}
 
@@ -65,10 +62,12 @@ class App extends React.Component {
                 {/* box (style 4) */}
                 <div className="box4">
                   <span className="box4__number">01</span>
-                  <h3 className="box4__title">Sign up for BuyCoin</h3>
-                  <p className="box4__text">There are many variations of passages of Lorem Ipsum available, but the majority
-                    have suffered alteration in some form, by injected humour, or <b>randomised words</b> which don't
-                    look even slightly.</p>
+                  <h3 className="box4__title">Download Metamask</h3>
+                  <p className="box4__text">
+                    <a href="https://metamask.io/" target="_blank">Metamask</a> is most popular cryptocurrency wallet in the world.
+                    Download Metamask on <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank">Chrome Store</a>, <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank">App Store</a> or <a href="https://play.google.com/store/apps/details?id=io.metamask&hl=en&gl=US" target="_blank">Play Store</a><br />
+                    Create your wallet and deposit USD
+                  </p>
                 </div>
                 {/* end box (style 4) */}
               </div>
@@ -77,10 +76,10 @@ class App extends React.Component {
                 {/* box (style 4) */}
                 <div className="box4">
                   <span className="box4__number">02</span>
-                  <h3 className="box4__title">Connect your bank account</h3>
-                  <p className="box4__text">There are many variations of passages of Lorem Ipsum available, <b>but the
-                    majority have suffered</b> alteration in some form, by injected humour, or randomised words
-                    which don't look even slightly.</p>
+                  <h3 className="box4__title">Connect your wallet</h3>
+                  <p className="box4__text">
+                    Press Metamask button in website to connect wallet with this website. On your phone, open Metamask and open browser in Metamask, access website and press Metamask button
+                  </p>
                 </div>
                 {/* end box (style 4) */}
               </div>
@@ -89,179 +88,20 @@ class App extends React.Component {
                 {/* box (style 4) */}
                 <div className="box4">
                   <span className="box4__number">03</span>
-                  <h3 className="box4__title">Buy and sell coins</h3>
-                  <p className="box4__text">There are many variations of passages of Lorem Ipsum available, but the majority
-                    <a href="#">have suffered</a> alteration in some form, by injected humour, or randomised words
-                    which don't look even slightly.
+                  <h3 className="box4__title">Receive Airdrop</h3>
+                  <p className="box4__text">
+                    After connect wallet, please choose your blockchain network and your USD. <br />
+                    Press <b>Receive</b> <br />
+                    → <b>Confirm</b>
                   </p>
                 </div>
                 {/* end box (style 4) */}
               </div>
-            </div>
+            </div><p></p>
+            <div className="row justify-content-center"><Button href="#home">Receive Airdrop ↑</Button></div>
           </div>
         </section>
         {/* end get started */}
-
-        {/* offers */}
-        <div className="section section--pt0">
-          <div className="container">
-            <div className="row">
-              {/* tabs nav */}
-              <div className="col-12 col-sm-10 offset-sm-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-                <ul className="nav nav-tabs section__tabs" role="tablist">
-                  <li className="nav-item">
-                    <a className="nav-link active" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1"
-                      aria-selected="true">USD</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2"
-                      aria-selected="false">EUR</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3"
-                      aria-selected="false">GBP</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4"
-                      aria-selected="false">RUB</a>
-                  </li>
-                </ul>
-              </div>
-              {/* end tabs nav */}
-
-              {/* tabs content */}
-              <div className="col-12">
-                <div className="tab-content">
-                  {/* tab1 */}
-                  <div className="tab-pane fade show active" id="tab-1" role="tabpanel">
-                    <ul className="offers">
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0082 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">$100</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0165 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">$200</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0412 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">$500</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0825 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">$1000</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* end tab1 */}
-
-                  {/* tab2 */}
-                  <div className="tab-pane fade" id="tab-2" role="tabpanel">
-                    <ul className="offers">
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.01 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">€100</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.02 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">€200</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.05 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">€500</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.1 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">€1000</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* end tab2 */}
-
-                  {/* tab3 */}
-                  <div className="tab-pane fade" id="tab-3" role="tabpanel">
-                    <ul className="offers">
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0105 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">£100</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0211 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">£200</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0422 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">£500</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.1052 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">£1000</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* end tab3 */}
-
-                  {/* tab4 */}
-                  <div className="tab-pane fade" id="tab-4" role="tabpanel">
-                    <ul className="offers">
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0132 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">₽10,000</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0264 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">₽20,000</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.0659 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">₽50,000</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                      <li className="offers__item">
-                        <span className="offers__get">Get 0.1318 BTC</span>
-                        <span className="offers__for">for</span>
-                        <span className="offers__value">₽100,000</span>
-                        <a className="offers__btn" href="#"><span>Buy</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* end tab4 */}
-                </div>
-              </div>
-              {/* end tabs content */}
-            </div>
-          </div>
-        </div>
-        {/* end offers */}
 
         {/* features */}
         <section id="features" className="section section--grey">
@@ -269,8 +109,8 @@ class App extends React.Component {
             <div className="row">
               {/* section title */}
               <div className="col-12">
-                <h2 className="section__title">BuyCoin template</h2>
-                <span className="section__tagline">Excellent for your business</span>
+                <h2 className="section__title">Brazil Fan Token</h2>
+                <span className="section__tagline">Why should I own $CBF?</span>
               </div>
               {/* end section title */}
 
@@ -278,11 +118,10 @@ class App extends React.Component {
                 {/* box (style 2) */}
                 <div className="box2">
                   <span className="box2__icon">
-                    <img src="img/chip.svg" />
+                    <img src="img/shareb.svg" />
                   </span>
-                  <h3 className="box2__title">Modern design</h3>
-                  <p className="box2__text"> If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                    isn't anything embarrassing hidden in the middle of text.</p>
+                  <h3 className="box2__title">Own a share of influence of your team</h3>
+                  <p className="box2__text"></p>
                 </div>
                 {/* end box (style 2) */}
               </div>
@@ -293,9 +132,8 @@ class App extends React.Component {
                   <span className="box2__icon">
                     <img src="img/slide.svg" />
                   </span>
-                  <h3 className="box2__title">Easy customize</h3>
-                  <p className="box2__text">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
-                    as necessary, making this the first true generator.</p>
+                  <h3 className="box2__title">Get in the driving seat and make the right decisions</h3>
+                  <p className="box2__text"> </p>
                 </div>
                 {/* end box (style 2) */}
               </div>
@@ -306,9 +144,8 @@ class App extends React.Component {
                   <span className="box2__icon">
                     <img src="img/chart.svg" />
                   </span>
-                  <h3 className="box2__title">Clean code</h3>
-                  <p className="box2__text">It to make a type specimen book. It has survived not only five centuries, but
-                    also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                  <h3 className="box2__title">Turn your dreams into reality with fantastic rewards</h3>
+                  <p className="box2__text"> </p>
                 </div>
                 {/* end box (style 2) */}
               </div>
@@ -317,11 +154,10 @@ class App extends React.Component {
                 {/* box (style 2) */}
                 <div className="box2">
                   <span className="box2__icon">
-                    <img src="img/server.svg" />
+                    <img src="img/cup.svg" />
                   </span>
-                  <h3 className="box2__title">Fully responsive</h3>
-                  <p className="box2__text">Various versions have evolved over the years, sometimes by accident, sometimes
-                    on purpose.</p>
+                  <h3 className="box2__title">Join a new era of super fans</h3>
+                  <p className="box2__text"> </p>
                 </div>
                 {/* end box (style 2) */}
               </div>
@@ -332,9 +168,8 @@ class App extends React.Component {
                   <span className="box2__icon">
                     <img src="img/chartpie.svg" />
                   </span>
-                  <h3 className="box2__title">Color scheme</h3>
-                  <p className="box2__text">It to make a type specimen book. It has survived not only five centuries, but
-                    also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                  <h3 className="box2__title">Join to win VIP rewards</h3>
+                  <p className="box2__text"> </p>
                 </div>
                 {/* end box (style 2) */}
               </div>
@@ -345,7 +180,7 @@ class App extends React.Component {
                   <span className="box2__icon">
                     <img src="img/robo.svg" />
                   </span>
-                  <h3 className="box2__title">Excellent purchase</h3>
+                  <h3 className="box2__title">Meet your Idol</h3>
                   <p className="box2__text">Various versions have evolved over the years, sometimes by accident, sometimes
                     on purpose.</p>
                 </div>
@@ -363,7 +198,7 @@ class App extends React.Component {
               {/* section title */}
               <div className="col-12">
                 <h2 className="section__title">Roadmap</h2>
-                <span className="section__tagline">Thorny path</span>
+                <span className="section__tagline">CBF project path</span>
               </div>
               {/* end section title */}
 
@@ -371,26 +206,26 @@ class App extends React.Component {
               <div className="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 col-xl-12 offset-xl-0">
                 <ul className="roadmap">
                   <li className="active">
-                    <span>Q3 2020</span>
+                    <span>Q1 2022</span>
                     <p>Project start-up. Product conception. System architecture development.</p>
                   </li>
                   <li className="active">
-                    <span>Q4 2020</span>
+                    <span>Q2 2022</span>
                     <p>Connection to stock exchanges. Development of trading platform and the system’s core elements.
                     </p>
                   </li>
-                  <li>
-                    <span>Q1 2021</span>
+                  <li className="active">
+                    <span>Q3 2022</span>
                     <p>Test environment launch for algorithm creators. Development of the first algorithms.</p>
                   </li>
-                  <li>
-                    <span>Q2 2021</span>
+                  <li className="active">
+                    <span>Q4 2022</span>
                     <p>Tradingene public product launch for algorithm creators. Broadening of financial instruments for
-                      algorithm creation.</p>
+                      algorithm creation. </p>
                   </li>
                   <li>
-                    <span>Q3 2022</span>
-                    <p>Development of user interface prototype for investors.</p>
+                    <span>Q1 2023</span>
+                    <p>Launch app NFT, Token fan, Metaverse...</p>
                   </li>
                 </ul>
               </div>
@@ -398,7 +233,7 @@ class App extends React.Component {
 
               {/* section button */}
               <div className="col-12">
-                <a href="#" className="section__btn"><span>purchase now</span></a>
+                <a href="#" className="section__btn"><span>Receive now</span></a>
               </div>
               {/* end section button */}
             </div>
@@ -411,12 +246,11 @@ class App extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-                <a href="https://vimeo.com/45830194" className="video__btn">
+                <a href="https://www.youtube.com/watch?v=yavo7EU2Qjc" className="video__btn">
                   <img src="img/play.svg" style={{ "width": "36px" }} />
                 </a>
-                <h4 className="video__title">How it Works?</h4>
-                <p className="video__text">Various versions have evolved over the years, sometimes by accident, sometimes on
-                  purpose (injected humour and the like).</p>
+                <h4 className="video__title">CBF winners</h4>
+                <p className="video__text"> </p>
               </div>
             </div>
           </div>
@@ -474,44 +308,6 @@ class App extends React.Component {
           </div>
         </section>
         {/* end safety */}
-
-        {/* info */}
-        <section className="section section--grey">
-          <div className="container">
-            <div className="row">
-              {/* section title */}
-              <div className="col-12">
-                <h2 className="section__title">Template Features</h2>
-                <span className="section__tagline">Your tagline</span>
-              </div>
-              {/* end section title */}
-
-              <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-                {/* info content */}
-                <div className="info__text">
-                  <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution of letters, as opposed to using 'Content here, content here', making it look like
-                    readable English.</p>
-
-                  <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
-                    text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-
-                  <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected
-                    humour and the like).</p>
-                </div>
-                {/* end info content */}
-              </div>
-
-              {/* section button */}
-              <div className="col-12">
-                <a href="#" className="section__btn"><span>purchase now</span></a>
-              </div>
-              {/* end section button */}
-            </div>
-          </div>
-        </section>
-        {/* end info */}
 
         {/* counter */}
         <div className="section section--bg counter" data-bg="img/section-bg/section-bg3.jpg">
@@ -823,105 +619,6 @@ class App extends React.Component {
         </section>
         {/* end team */}
 
-        {/* blog */}
-        <section id="blog" className="section">
-          <div className="container">
-            <div className="row">
-              {/* section title */}
-              <div className="col-12">
-                <h2 className="section__title">Blog</h2>
-                <span className="section__tagline">Our publications</span>
-              </div>
-              {/* end section title */}
-
-              {/* article */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <article className="article">
-                  <figure className="article__img">
-                    <a href="#article" className="modal-article">
-                      <img src="img/blog/1.jpg" alt="" />
-                    </a>
-                  </figure>
-
-                  <header className="article__header">
-                    <h3 className="article__title">
-                      <a href="#article" className="modal-article">Blockchain</a>
-                    </h3>
-                  </header>
-
-                  <div className="article__content">
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                      alteration in some form...</p>
-
-                    <div className="article__meta">
-                      <div className="article__author">by <a href="#">Admin</a></div>
-                      <div className="article__date">26.08.2020</div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              {/* end article */}
-
-              {/* article */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <article className="article">
-                  <figure className="article__img">
-                    <a href="#article" className="modal-article">
-                      <img src="img/blog/2.jpg" alt="" />
-                    </a>
-                  </figure>
-
-                  <header className="article__header">
-                    <h3 className="article__title">
-                      <a href="#article" className="modal-article">Buy Coin listing</a>
-                    </h3>
-                  </header>
-
-                  <div className="article__content">
-                    <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-                      embarrassing...</p>
-
-                    <div className="article__meta">
-                      <div className="article__author">by <a href="#">Admin</a></div>
-                      <div className="article__date">26.08.2020</div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              {/* end article */}
-
-              {/* article */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <article className="article">
-                  <figure className="article__img">
-                    <a href="#article" className="modal-article">
-                      <img src="img/blog/3.jpg" alt="" />
-                    </a>
-                  </figure>
-
-                  <header className="article__header">
-                    <h3 className="article__title">
-                      <a href="#article" className="modal-article">Business</a>
-                    </h3>
-                  </header>
-
-                  <div className="article__content">
-                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
-                      text...</p>
-
-                    <div className="article__meta">
-                      <div className="article__author">by <a href="#">Admin</a></div>
-                      <div className="article__date">26.08.2020</div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              {/* end article */}
-            </div>
-          </div>
-        </section>
-        {/* end blog */}
-
         {/* faq */}
         <section className="section section--grey">
           <div className="container">
@@ -942,15 +639,13 @@ class App extends React.Component {
                     <div className="faq__btn" id="heading1">
                       <button type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false"
                         aria-controls="collapse1">
-                        <span>When will BuyCoin be listed on exchanges?</span>
+                        <span>When will CBF be listed on exchanges?</span>
                         <img src="img/plus.svg" style={{ "width": "33px" }} />
                       </button>
                     </div>
 
                     <div id="collapse1" className="collapse" aria-labelledby="heading1" data-parent="#accordion">
-                      <p className="faq__text">The point of using Lorem Ipsum is that it has a more-or-less normal
-                        distribution of letters, as opposed to using 'Content here, content here', making it look
-                        like readable English.</p>
+                      <p className="faq__text">It is expected that the project will go listing at the end of 2022 with the support of large investment funds.</p>
                     </div>
                   </div>
                 </div>
@@ -966,8 +661,7 @@ class App extends React.Component {
                     </div>
 
                     <div id="collapse2" className="collapse" aria-labelledby="heading2" data-parent="#accordion">
-                      <p className="faq__text">It is a long established fact that a reader will be distracted by the
-                        readable content of a page when looking at its layout.</p>
+                      <p className="faq__text">Just simply deposit assets into the exchange and trade, the expected time is at the end of the year.</p>
                     </div>
                   </div>
                 </div>
@@ -983,10 +677,7 @@ class App extends React.Component {
                     </div>
 
                     <div id="collapse3" className="collapse" aria-labelledby="heading3" data-parent="#accordion">
-                      <p className="faq__text">It uses a dictionary of over 200 Latin words, combined with a handful of
-                        model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated
-                        Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic
-                        words etc.</p>
+                      <p className="faq__text">Popular asset classes like USDC, USDT, BUSD, BTC, ETH, BNB,...</p>
                     </div>
                   </div>
                 </div>
@@ -1002,8 +693,8 @@ class App extends React.Component {
                     </div>
 
                     <div id="collapse4" className="collapse" aria-labelledby="heading4" data-parent="#accordion">
-                      <p className="faq__text">All the Lorem Ipsum generators on the Internet tend to repeat predefined
-                        chunks as necessary, making this the first true generator on the Internet.</p>
+                      <p className="faq__text">
+                        Following 3 step <a href="#getstarted"><b>here</b></a>, easy .</p>
                     </div>
                   </div>
                 </div>
@@ -1013,14 +704,13 @@ class App extends React.Component {
                     <div className="faq__btn" id="heading5">
                       <button className="collapsed" type="button" data-toggle="collapse" data-target="#collapse5"
                         aria-expanded="false" aria-controls="collapse5">
-                        <span>How do I benefit from the ICO Token?</span>
+                        <span>How do I benefit from the CBF Token?</span>
                         <img src="img/plus.svg" style={{ "width": "33px" }} />
                       </button>
                     </div>
 
                     <div id="collapse5" className="collapse" aria-labelledby="heading5" data-parent="#accordion">
-                      <p className="faq__text">If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                        isn't anything embarrassing hidden in the middle of text.</p>
+                      <p className="faq__text">With the backing of large investment funds, a talented development team, and the popularity of huge fans, will help the token grow well and sustainably.</p>
                     </div>
                   </div>
                 </div>
@@ -1030,15 +720,13 @@ class App extends React.Component {
                     <div className="faq__btn" id="heading6">
                       <button className="collapsed" type="button" data-toggle="collapse" data-target="#collapse6"
                         aria-expanded="false" aria-controls="collapse6">
-                        <span>How can I participate in the ICO Token sale?</span>
+                        <span>How can I participate in the First Token sale?</span>
                         <img src="img/plus.svg" style={{ "width": "33px" }} />
                       </button>
                     </div>
 
                     <div id="collapse6" className="collapse" aria-labelledby="heading6" data-parent="#accordion">
-                      <p className="faq__text">There are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered alteration in some form, by injected humour, or randomised words which
-                        don't look even slightly believable.</p>
+                      <p className="faq__text">First you need to register to receive the airdrop, then we will notify you when the launch pad date comes, you will have the first priority to buy.</p>
                     </div>
                   </div>
                 </div>
@@ -1068,8 +756,7 @@ class App extends React.Component {
                       <span>
                         <img src="img/phone.svg" style={{ "width": "33px" }} />
                       </span>
-                      <p>The BuyCoin Company, LLC <br />
-                        32 Barnard St. #145, GA 80634</p>
+                      <p>Rua 14 de Julho, 1274 - Centro, <br />Campo Grande, Brazil</p>
                     </li>
                     <li>
                       <span>
@@ -1081,13 +768,7 @@ class App extends React.Component {
                       <span>
                         <img src="img/mail.svg" style={{ "width": "33px" }} />
                       </span>
-                      <a href="mailto:support@buycoin.template">support@BuyCoin.template</a>
-                    </li>
-                    <li>
-                      <span>
-                        <img src="img/phone.svg" style={{ "width": "33px" }} />
-                      </span>
-                      <a href="tel:88002345678">8 800 234-56-78</a>
+                      <a href={"mailto:support@" + document.location.host}>{"support@" + document.location.host}</a>
                     </li>
                   </ul>
                 </div>
@@ -1217,9 +898,7 @@ class App extends React.Component {
 
               <div className="col-12">
                 {/* copyright */}
-                <small className="footer__copyright">© BuyCoin, 2018—2021. Create by <a
-                  href="https://themeforest.net/user/dmitryvolkov/portfolio" target="_blank">Dmitry
-                  Volkov</a>.</small>
+                <small className="footer__copyright">© CBF, 2022 .</small>
                 {/* end copyright */}
               </div>
             </div>
