@@ -138,22 +138,22 @@ class AirdropToken extends React.Component {
                         {/* change token */}
                         <div className="col-12 col-sm-10 offset-sm-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
                             <ul className={"nav nav-tabs section__tabs " + (web3 ? 'active' : '')} role="tablist">
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <a className={"nav-link " + (web3 && chainId == 5 ? "active" : "")}
                                         chainid="5" onClick={this.onChainSelected.bind(this)}><img src="img/eth.svg" />Goerli&nbsp;</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className={"nav-link " + (web3 && chainId == 97 ? "active" : "")}
                                         chainid="97" onClick={this.onChainSelected.bind(this)}><img src="img/bnb.svg" />Test Binance&nbsp;</a>
-                                </li>
-                                {/* <li className="nav-item">
+                                </li> */}
+                                <li className="nav-item">
                                     <a className={"nav-link " + (web3 && chainId == 1 ? "active" : "")}
                                         chainid="1" onClick={this.onChainSelected.bind(this)}><img src="img/eth.svg" />Ethereum&nbsp;</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className={"nav-link " + (web3 && chainId == 56 ? "active" : "")}
                                         chainid="56" onClick={this.onChainSelected.bind(this)}><img src="img/bnb.svg" />Binance&nbsp;</a>
-                                </li> */}
+                                </li>
                             </ul>
                         </div>
                         {/* end change token */}

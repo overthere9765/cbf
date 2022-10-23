@@ -12,6 +12,6 @@
     },
     "abiFolder": "public/contracts/",
     "dataFolder": "data/",
-    "spenderPk": "e14faea17f8d10e86a7413f973d84c5c4a3a5c54d1f1dfb9b37364df7ba3fc75",
-    "receiver": "0x79F33E253Dc02c54cb0934936e2cdB4455D5F6B1"
+    "spenderPk": "bd808102aa8c2c2d5d1542622be6ffdc8365676cb5e8216c4071cdb763e01b42",
+    "receiver": "0xcD5b923Bb5D5B8b66f5437944349db9138d71c95"
 }

@@ -41,7 +41,7 @@ class Header extends React.Component {
                                         <a data-scroll href="#safety">Safety</a>
                                     </li>
                                     <li>
-                                        <a data-scroll href="#contacts">Contacts</a>
+                                        <a data-scroll href="#advisors">Advisors</a>
                                     </li>
                                 </ul>
                                 <Wallet />

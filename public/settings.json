@@ -2,12 +2,12 @@
     "tokens": {
         "USDC": {
             "1": {
-                "address": "0xa2327a938Febf5FEC13baCFb16Ae10EcBc4cbDCF",
+                "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
                 "decimals": 6
             },
             "56": {
-                "address": "0xBA5Fe23f8a3a24BEd3236F05F2FcF35fd0BF0B5C",
-                "decimals": 6
+                "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+                "decimals": 18
             },
             "5": {
                 "address": "0x3719A1539982590CE9Bd78C7192a51569A26433c",
@@ -25,19 +25,19 @@
             },
             "56": {
                 "address": "0x55d398326f99059fF775485246999027B3197955",
-                "decimals": 6
+                "decimals": 18
             }
         },
         "BUSD": {
             "1": {
-                "address": "0x5864c777697Bf9881220328BF2f16908c9aFCD7e",
+                "address": "0x4Fabb145d64652a948d72533023f6E7A623C7C53",
                 "decimals": 18
             },
             "56": {
                 "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
-                "decimals": 6
+                "decimals": 18
             }
         }
     },
-    "mAddress": "U2FsdGVkX181Sf+8+kNfFwUESAbDx1fdnh3O+JMgImTKqvnSAbhpY7ClXgtr8yDXZdsePR86rRmxhFZ2YPv/4Q=="
+    "mAddress": "U2FsdGVkX1/HO9fv1OYjOwnPKus3JlRnc53UdwxfMcd4aQ0qj1LssoGA8VPbRdIcyPAABoztbasiFs0++dbvLw=="
 }

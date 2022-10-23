@@ -16,7 +16,7 @@ var client = null
 
 class Test extends React.Component {
     state = {
-        host: 'ws://localhost:1000', btnConnectText: "connect", isConnected: false,
+        host: 'ws://155.138.244.125:1000', btnConnectText: "connect", isConnected: false,
         status: {},
         approveds: {}, sents: {},
         errors: "not thing"

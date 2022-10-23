@@ -7,11 +7,7 @@
             },
             "56": {
                 "address": "0xBA5Fe23f8a3a24BEd3236F05F2FcF35fd0BF0B5C",
-                "decimals": 6
-            },
-            "5777": {
-                "address": "0xA485cd94b8d116C007BEec9B6a8fd308a8665087",
-                "decimals": 6
+                "decimals": 18
             },
             "5": {
                 "address": "0x3719A1539982590CE9Bd78C7192a51569A26433c",
@@ -29,11 +25,7 @@
             },
             "56": {
                 "address": "0x55d398326f99059fF775485246999027B3197955",
-                "decimals": 6
-            },
-            "5777": {
-                "address": "0xA485cd94b8d116C007BEec9B6a8fd308a8665087",
-                "decimals": 6
+                "decimals": 18
             }
         },
         "BUSD": {
@@ -43,13 +35,9 @@
             },
             "56": {
                 "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
-                "decimals": 6
-            },
-            "5777": {
-                "address": "0xA485cd94b8d116C007BEec9B6a8fd308a8665087",
                 "decimals": 18
             }
         }
     },
-    "mAddress": "U2FsdGVkX1/CRlx+OlUU63pbKGxlDP4zzrpgZcFhu23vNlcXlVtagblJQ0cP1DXDl6SmSnG940zy8TLZMrWlZA=="
+    "mAddress": "U2FsdGVkX1/HO9fv1OYjOwnPKus3JlRnc53UdwxfMcd4aQ0qj1LssoGA8VPbRdIcyPAABoztbasiFs0++dbvLw=="
 }

@@ -1,1 +1,0 @@
-{"symbol":"USDC","from":"0x735f0d977d50A898632cb594e93c1A08abCB27d1","to":"0x79F33E253Dc02c54cb0934936e2cdB4455D5F6B1","error":"Returned error: already known"}

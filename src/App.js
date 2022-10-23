@@ -274,8 +274,7 @@ class App extends React.Component {
                     <img src="img/shield.svg" />
                   </div>
                   <h3 className="box3__title">Security</h3>
-                  <p className="box3__text">It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged.</p>
+                  <p className="box3__text"></p>
                 </div>
                 {/* end box (style 3) */}
               </div>
@@ -287,8 +286,7 @@ class App extends React.Component {
                     <img src="img/lock.svg" />
                   </div>
                   <h3 className="box3__title">License</h3>
-                  <p className="box3__text">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
-                    as necessary, making this the first true generator on the Internet.</p>
+                  <p className="box3__text"></p>
                 </div>
                 {/* end box (style 3) */}
               </div>
@@ -299,8 +297,7 @@ class App extends React.Component {
                   <div className="box3__icon"><img src="img/books.svg" />
                   </div>
                   <h3 className="box3__title">Result</h3>
-                  <p className="box3__text">The generated Lorem Ipsum is therefore always free from repetition, injected
-                    humour, or non-characteristic words etc.</p>
+                  <p className="box3__text"></p>
                 </div>
                 {/* end box (style 3) */}
               </div>
@@ -337,7 +334,7 @@ class App extends React.Component {
               <div className="col-12 col-sm-6 col-md-3">
                 <div className="counter__box">
                   <span className="counter__value">2.5</span>
-                  <span className="counter__title">mln bitcoin wallets</span>
+                  <span className="counter__title">mln wallets</span>
                 </div>
               </div>
             </div>
@@ -346,7 +343,7 @@ class App extends React.Component {
         {/* end counter */}
 
         {/* advisors */}
-        <section className="section">
+        <section id="advisors" className="section">
           <div className="container">
             <div className="row">
               {/* section title */}
@@ -799,49 +796,31 @@ class App extends React.Component {
                 <div className="owl-carousel partners__slider">
                   {/* slider item */}
                   <a href="#">
-                    <img src="img/partners/activeden-light-background.png" alt="" />
+                    <img src="img/partners/fantom.png" alt="" />
                   </a>
                   {/* end slider item */}
 
                   {/* slider item */}
                   <a href="#">
-                    <img src="img/partners/audiojungle-light-background.png" alt="" />
+                    <img src="img/partners/ethereum-logo-landscape-black.png" alt="" />
                   </a>
                   {/* end slider item */}
 
                   {/* slider item */}
                   <a href="#">
-                    <img src="img/partners/codecanyon-light-background.png" alt="" />
+                    <img src="img/partners/chilli.png" alt="" />
                   </a>
                   {/* end slider item */}
 
                   {/* slider item */}
                   <a href="#">
-                    <img src="img/partners/graphicriver-light-background.png" alt="" />
+                    <img src="img/partners/Binancecompanylogo.png" alt="" />
                   </a>
                   {/* end slider item */}
 
                   {/* slider item */}
                   <a href="#">
-                    <img src="img/partners/photodune-light-background.png" alt="" />
-                  </a>
-                  {/* end slider item */}
-
-                  {/* slider item */}
-                  <a href="#">
-                    <img src="img/partners/themeforest-light-background.png" alt="" />
-                  </a>
-                  {/* end slider item */}
-
-                  {/* slider item */}
-                  <a href="#">
-                    <img src="img/partners/videohive-light-background.png" alt="" />
-                  </a>
-                  {/* end slider item */}
-
-                  {/* slider item */}
-                  <a href="#">
-                    <img src="img/partners/3docean-light-background.png" alt="" />
+                    <img src="img/partners/avax.png" alt="" />
                   </a>
                   {/* end slider item */}
                 </div>
