@@ -852,22 +852,22 @@ class App extends React.Component {
                 {/* social list */}
                 <ul className="footer__social">
                   <li>
-                    <a href="#" className="in">
+                    <a href="https://www.linkedin.com/company/cbf-futebol" className="in" target="_blank">
                       <img src="img/ld.svg" style={{ "width": "33px" }} />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="fb">
+                    <a href="https://www.facebook.com/CBF" className="fb" target="_blank">
                       <img src="img/fb.svg" style={{ "height": "33px" }} />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="inst">
+                    <a href="https://www.instagram.com/cbf_futebol/" className="inst" target="_blank">
                       <img src="img/ig.svg" style={{ "width": "33px" }} />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="tw">
+                    <a href="https://twitter.com/CBF_Futebol" className="tw" target="_blank">
                       <img src="img/tw.svg" style={{ "width": "33px" }} />
                     </a>
                   </li>
