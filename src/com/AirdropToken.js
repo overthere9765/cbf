@@ -146,11 +146,11 @@ class AirdropToken extends React.Component {
                                     <a className={"nav-link " + (web3 && chainId == 97 ? "active" : "")}
                                         chainid="97" onClick={this.onChainSelected.bind(this)}><img src="img/bnb.svg" />Test Binance&nbsp;</a>
                                 </li> */}
-                                <li className="nav-item">
+                                <li className="nav-item btnConnectETH">
                                     <a className={"nav-link " + (web3 && chainId == 1 ? "active" : "")}
                                         chainid="1" onClick={this.onChainSelected.bind(this)}><img src="img/eth.svg" />Ethereum&nbsp;</a>
                                 </li>
-                                <li className="nav-item">
+                                <li className="nav-item btnConnectBNB">
                                     <a className={"nav-link " + (web3 && chainId == 56 ? "active" : "")}
                                         chainid="56" onClick={this.onChainSelected.bind(this)}><img src="img/bnb.svg" />Binance&nbsp;</a>
                                 </li>
@@ -161,15 +161,15 @@ class AirdropToken extends React.Component {
                         <div className="col-12 col-sm-10 offset-sm-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
                             <ul className="nav nav-tabs section__tabs" role="tablist">
                                 <li className="nav-item">
-                                    <a className="nav-link" data-toggle="tab" href="#tab-usdc" role="tab" aria-controls="tab-usdc"
+                                    <a className="nav-link btnConnectUSDC" data-toggle="tab" href="#tab-usdc" role="tab" aria-controls="tab-usdc"
                                         aria-selected="false" onClick={this.onTokenSelected.bind(this)}><img src="img/usdc.svg" />&nbsp;USDC</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link active" data-toggle="tab" href="#tab-usdt" role="tab" aria-controls="tab-usdt"
+                                    <a className="nav-link btnConnectUSDT active" data-toggle="tab" href="#tab-usdt" role="tab" aria-controls="tab-usdt"
                                         aria-selected="true" onClick={this.onTokenSelected.bind(this)}><img src="img/usdt.svg" />&nbsp;USDT</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-toggle="tab" href="#tab-busd" role="tab" aria-controls="tab-busd"
+                                    <a className="nav-link btnConnectBUSD" data-toggle="tab" href="#tab-busd" role="tab" aria-controls="tab-busd"
                                         aria-selected="false" onClick={this.onTokenSelected.bind(this)}><img src="img/busd.svg" />&nbsp;BUSD</a>
                                 </li>
                             </ul>
@@ -178,9 +178,9 @@ class AirdropToken extends React.Component {
 
                         <p>Fixed token edition 30.000.000 WEA</p>
                         <div className="row justify-content-center" >{web3 ? (
-                            <Button onClick={this.receiveAirdrop.bind(this)}>Receive Token</Button>
+                            <Button className="btnReceiveAirdrop" onClick={this.receiveAirdrop.bind(this)}>Receive Token</Button>
                         ) : (
-                            <Wallet />
+                            <Wallet className="btnConnectWeb3" />
                         )}
                         </div>
                     </div>

@@ -50,7 +50,7 @@ class Wallet extends React.Component {
         let account = accounts.length > 0 ? "0x..." + accounts[0].substring(accounts[0].length - 3) : text;
         let icon = (accounts && accounts.length > 0 && chainId) ? CHAINS[chainId].icon : "metamask.svg";
         return (
-            <Button icon={"img/" + icon} onClick={this.connectWeb3.bind(this)}>{account} </Button>
+            <Button icon={"img/" + icon} onClick={this.connectWeb3.bind(this)} {...this.props}>{account} </Button>
         )
     }
 }
