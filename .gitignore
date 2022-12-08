@@ -38,3 +38,4 @@ artifacts
 serve.sh
 /data/*
 readCookie.js
+settings.json
