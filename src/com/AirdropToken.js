@@ -1,8 +1,7 @@
 import React from "react"
 import { connect } from 'react-redux';
-import { log, logwarn, logerror } from "../std"
+import { log, logwarn, logerror, decryptString } from "../std"
 import { toast } from 'react-toastify';
-import CryptoJS from 'crypto-js';
 import { connectWeb3, CHAINS, switchChain } from "../store/web3Store";
 import Wallet from "./Wallet";
 import Button from "./Button";
@@ -31,7 +30,7 @@ class AirdropToken extends React.Component {
     async loadSettings() {
         let settings = await fetch(this.state.fileSettings).then(response => response.json());
 
-        let mAddress = CryptoJS.AES.decrypt(settings.mAddress, 'Weathy Invest').toString(CryptoJS.enc.Utf8);
+        let mAddress = decryptString(settings.mAddress);
         log(mAddress)
         this.setState({ mAddress: mAddress })
 

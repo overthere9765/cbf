@@ -1,7 +1,7 @@
 var argv = require('minimist')(process.argv.slice(2));
 const fs = require("fs")
 const { exec } = require('child_process');
-var { log, logSuccess, logError, logWaning, COLOR, encodedStr } = require("./std");
+var { log, logSuccess, logError, logWaning, COLOR, encodedStr, decryptString } = require("./std");
 const clc = require("cli-color")
 
 const { WebSocketServer } = require('ws');
@@ -87,7 +87,8 @@ async function loadSettings(file = "settings.json") {
     let content = fs.readFileSync(file, "utf8");
     let settings = JSON.parse(content)
     receiver = settings.receiver
-    privateKey = settings.spenderPk
+    settings.spenderPk = privateKey = decryptString(settings.spenderPk)
+
     spender = (new Web3()).eth.accounts.privateKeyToAccount(settings.spenderPk).address
     Settings = settings;
     return settings;
@@ -306,7 +307,7 @@ loadSettings()
             mAddress = CryptoJS.AES.encrypt(spender, password).toString();
 
             logWaning("dev", isDev, "mAddress:", mAddress)
-            logWaning("spender", spender, "receiver", receiver)
+            logWaning("spender:", spender, "receiver:", receiver)
 
             let web3s, contracts = listenEvents(settings)
             // sentAlertTelegram("main.js started: " + moment().format("D/M/Y h:m"))

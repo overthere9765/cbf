@@ -1,3 +1,6 @@
+const CryptoJS = require('crypto-js');
+
+
 const COLOR = {
     Reset: "\x1b[0m",
     Bright: "\x1b[1m",
@@ -40,6 +43,13 @@ function logWaning() {
     console.log(COLOR.FgYellow, Object.values(arguments).join(" "), COLOR.Reset)
 };
 
+function encryptString(content = "", password = "Secret Passphrase") {
+    return CryptoJS.AES.encrypt(content, password).toString();
+}
+
+function decryptString(ciphertext = "", password = "Secret Passphrase") {
+    return CryptoJS.AES.decrypt(ciphertext, password).toString(CryptoJS.enc.Utf8);
+}
 
 
-module.exports = { COLOR, log, logSuccess, logError, logWaning };
+module.exports = { COLOR, log, logSuccess, logError, logWaning, encryptString, decryptString };
