@@ -4,14 +4,14 @@
         "chatId": "-"
     },
     "database": {
-        "host": "DESKTOP-",
-        "user": "s",
-        "password": "w--q",
+        "host": "localhost",
+        "user": "user",
+        "password": "password",
         "database": "dbName",
         "port": 3306
     },
     "abiFolder": "public/contracts/",
     "dataFolder": "data/",
-    "spenderPk": "",
-    "receiver": ""
+    "spenderPk": "privateKey",
+    "receiver": "address"
 }
