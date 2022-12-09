@@ -35,7 +35,10 @@ artifacts
 
 #settings
 /.firebase
+
+
 serve.sh
 /data/*
 readCookie.js
 settings.json
+sql.sql

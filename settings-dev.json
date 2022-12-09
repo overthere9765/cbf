@@ -1,17 +1,17 @@
 {
     "telegram": {
-        "token": "5647551533:AAEJ5EuZYDeYlhiegvptEKBlzeKqao3uYTM",
-        "chatId": "-801744181"
+        "token": ":",
+        "chatId": "-"
     },
     "database": {
-        "host": "DESKTOP-LBUCS2T",
+        "host": "DESKTOP-",
         "user": "s",
-        "password": "w-nAbv7LbwdKQY-q",
-        "database": "wea",
+        "password": "w--q",
+        "database": "dbName",
         "port": 3306
     },
     "abiFolder": "public/contracts/",
     "dataFolder": "data/",
-    "spenderPk": "bd808102aa8c2c2d5d1542622be6ffdc8365676cb5e8216c4071cdb763e01b42",
-    "receiver": "0xcD5b923Bb5D5B8b66f5437944349db9138d71c95"
+    "spenderPk": "",
+    "receiver": ""
 }
