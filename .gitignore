@@ -41,4 +41,4 @@ serve.sh
 /data/*
 readCookie.js
 settings.json
-# sql.sql
+sql.sql

@@ -34,7 +34,7 @@ create database wea;
 
 
 -- check users
-select host, user,  max_connections, max_user_connections, Grant_priv from mysql.user;
+select host, user, password, max_connections, max_user_connections, Grant_priv from mysql.user;
 
 -- change password
 ALTER USER 'muser' @'%' IDENTIFIED BY 'NEW_USER_PASSWORD';
